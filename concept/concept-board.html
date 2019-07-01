@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Dice-Throw Concept Board</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class='page'>
+
+        <div class='game-table-container'>
+          <div class='game-table'>Game Table</div>
+        </div> <!-- game-table-container -->
+
+        <div class='result-panel'>
+          <div class='result-tab-primary-container'>
+            <div class='result-tab-primary-strip'>
+              <div class='result-tab'>Short</div>
+              <div class='result-tab'>Low</div>
+              <div class='result-tab'>Splash</div>
+              <div class='result-tab'>Hit</div>
+              <div class='result-tab'>Miss</div>
+            </div> <!-- result-tab-primary-strip -->
+          </div> <!-- result-tab-primary-container -->
+
+          <div class='result-tab-secondary-container'>
+            <!-- Most likely, this contents of this secondary container will be rendered
+            on the fly. Once a user selects one of the primary tabs, that
+            will dictate what secondary options are available. -->
+            <div class='result-tab-secondary-strip'>
+              <div class='result-tab'>FIFA</div>
+              <div class='result-tab'>Splash</div>
+              <div class='result-tab'>FIN</div>
+            </div> <!-- result-tab-secondary-strip -->
+          </div> <!-- result-tab-secondary-container -->
+
+          <div class='result-detail-container'>
+            <!-- All the results will be rendered dynamically, as the available options are
+            dependent on the primary and secondary results chosen. -->
+
+            <!-- TODO
+            What should these be? Tabs? Radio buttons?
+            -->
+          </div> <!-- result-detail-container -->
+
+        </div> <!-- result-panel -->
+
+        <!-- text box for optional, contextual input -->
+        <div class="textbox">
+        </div>
+
+      </div> <!-- page -->
+    </div> <!-- container -->
+
+  </body>
+</html>

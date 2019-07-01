@@ -1,0 +1,80 @@
+/* Dice-Throw Stylesheet */
+
+/* override default margins, padding, sizing */
+* {
+  margin: 10;
+  padding: 10;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.page { /* align parent container */
+  display: flex;
+  /* justify-content: flex-start; */
+  width: 1500px;
+  /* margin: 10 auto; */
+  /* padding: 40; */
+  /* overflow: hidden; */
+  background-color: #EAEDF1;
+}
+
+.game-table-container {
+  margin: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.game-table {
+  border: 1px solid #eee;
+  height: 500px;
+  width: 300px;
+  display: flex;
+  /* justify-content: space-around; */
+  background-color: #2ca25f;
+}
+
+.result-panel {
+  margin: 40px;
+  display: flex;
+  height: 500px;
+  width: 700px;
+  border: 1px solid #000000;
+  /* align-items: flex-start; */
+  flex-direction: column;
+}
+
+.result-tab-primary-container {
+  display: flex;
+  justify-content: center;
+}
+
+.result-tab-primary-strip {
+  margin-top: 10px;
+  display: flex;
+  width: 650px;
+  justify-content: space-around;
+  align-items: row;
+  border: 1px solid #000; /* remove this probably, jsut to show location */
+}
+
+.result-tab {
+  margin: 3px;
+  display: flex;
+}
+
+.result-tab-secondary-container {
+  display: flex;
+  margin: 10px;
+  justify-content: center; /* will start from left, extend to right */
+}
+
+.result-tab-secondary-strip {
+  width: 650px;
+  display: flex;
+  justify-content: space-around; /* evenly spaced elements */
+  border: 1px solid #000; /* remove this probably, jsut to show location */
+}
