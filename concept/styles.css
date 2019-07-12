@@ -37,6 +37,13 @@
   background-color: #2ca25f;
 }
 
+#game-table-canvas {
+  height: 500px;
+  width: 300px;
+  display: flex;
+  background-color: #2ca25f;
+}
+
 .result-panel {
   margin: 40px;
   display: flex;

@@ -1,0 +1,8 @@
+Quickly Assembled List of Resources
+
+* for tabs
+https://www.w3schools.com/bootstrap/bootstrap_tabs_pills.asp (tutorial)
+https://www.w3schools.com/bootstrap/bootstrap_ref_js_tab.asp (reference)
+
+* for buttons
+https://getbootstrap.com/docs/4.0/components/buttons/
