@@ -9,11 +9,38 @@ var context = canvas.getContext("2d");
 var canvasPos = getPosition(canvas);
 var mouseX = 0;
 var mouseY = 0;
+var draw = false; // start not drawing
 
-canvas.addEventListener("mousemove", setMousePosition, false); // TODO actually look up what this is doing
+function mouseDownEventHandler(e) {
+  /* Only want to draw on a mouseDown event, so when the mouse is
+  down, we draw */
+  setMousePosition(e);
+  draw = true;
+  if (draw) {
+    update();
+  }
+}
+
+function mouseUpEventHandler(e) {
+  /* Once the mouse is up, no more drawing */
+  draw = false;
+  context.closePath(e);
+}
+
+function mouseLeaveEventHandler(e) {
+  /* once the mouse leaves the plane of the canvas, stop drawing */
+  draw = false;
+  context.closePath(e);
+}
+
+function mouseMoveEventHandler(e) {
+  setMousePosition(e);
+  if (draw){
+    update();
+  }
+}
 
 function setMousePosition(e) {
-  console.log("blah");
   mouseX = e.clientX - canvasPos.x;
   mouseY = e.clientY - canvasPos.y;
 }
@@ -33,11 +60,13 @@ function storeLastPosition(xPos, yPos) {
   }
 }
 
-function update() {
-  // TODO on next iteration, draw a line, not a circle, and let the line remain until
-  // another is drawn
-  context.clearRect(0, 0, canvas.width, canvas.height);
+function clearCanvas() {
+  // TODO implement with button?
+  /* Clear any drawing from the canvas */
+  context.clearRect(0, 0, cavnas.width, canvas.height);
+}
 
+function update() {
   // the trail
   for (var i=0; i<positions.length; ++i) {
     drawCircle(positions[i].x, positions[i].y, i / positions.length); // that ratio defines the opacity of each subsequent circle in trail
@@ -47,10 +76,8 @@ function update() {
   drawCircle(mouseX, mouseY, "primary");
   storeLastPosition(mouseX, mouseY);
 
-  requestAnimationFrame(update); // animation loop call
 }
 
-update(); // call to start animation
 
 function drawCircle(x, y, a) {
   var alpha;
@@ -103,3 +130,7 @@ function getPosition(el) {
   };
 }
 
+canvas.addEventListener("mousemove", mouseMoveEventHandler, false);
+canvas.addEventListener('mousedown', mouseDownEventHandler);
+canvas.addEventListener('mouseup', mouseUpEventHandler);
+canvas.addEventListener('mouseleave', mouseLeaveEventHandler);
