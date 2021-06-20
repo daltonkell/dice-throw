@@ -1,8 +1,7 @@
 /* Dice-Throw Stylesheet */
 
 /* override default margins, padding, sizing */
-* {
-  margin: 10;
+* { margin: 10;
   padding: 10;
   box-sizing: border-box;
 }
@@ -56,7 +55,8 @@
   height: 25px;
   width: 75px;
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
+  /*justify-content: flex-start;*/
 }
 
 .table-reset-button {
@@ -66,12 +66,12 @@
   background-color: #3ba65f;
 }
 .result-panel {
-  margin: 40px;
+  /*margin: 20px;*/
+  margin-bottom: 20px;
   display: flex;
-  height: 500px;
+  height: 350px;
   width: 700px;
   border: 1px solid #000000;
-  /* align-items: flex-start; */
   flex-direction: column;
 }
 
@@ -105,4 +105,12 @@
   display: flex;
   justify-content: space-around; /* evenly spaced elements */
   border: 1px solid #000; /* remove this probably, jsut to show location */
+}
+
+.textbox {
+  display: flex;
+  margin: 10px;
+  height: 50px;
+  width: 700px;
+  border: 1px solid #000;
 }

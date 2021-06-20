@@ -25,44 +25,51 @@
               <canvas id='game-table-canvas' height="500px" width="300px">
             </div> <!-- game-table-container -->
 
-            <div class='result-panel'>
-              <div class='result-tab-primary-container'>
-                <div class='result-tab-primary-strip'>
-                  <div class='result-tab'>Short</div>
-                  <div class='result-tab'>Low</div>
-                  <div class='result-tab'>Splash</div>
-                  <div class='result-tab'>Hit</div>
-                  <div class='result-tab'>Miss</div>
-                </div> <!-- result-tab-primary-strip -->
-              </div> <!-- result-tab-primary-container -->
+            <!-- column to hold the results, then textbox below -->
+            <div class="column-div">
+              <div class='result-panel'>
+                <div class='result-tab-primary-container'>
+                  <div class='result-tab-primary-strip'>
+                    <div class='result-tab'>Short</div>
+                    <div class='result-tab'>Low</div>
+                    <div class='result-tab'>Splash</div>
+                    <div class='result-tab'>Hit</div>
+                    <div class='result-tab'>Miss</div>
+                  </div> <!-- result-tab-primary-strip -->
+                </div> <!-- result-tab-primary-container -->
 
-              <div class='result-tab-secondary-container'>
-                <!-- Most likely, this contents of this secondary container will be rendered
-                on the fly. Once a user selects one of the primary tabs, that
-                will dictate what secondary options are available. -->
-                <div class='result-tab-secondary-strip'>
-                  <div class='result-tab'>FIFA</div>
-                  <div class='result-tab'>Splash</div>
-                  <div class='result-tab'>FIN</div>
-                </div> <!-- result-tab-secondary-strip -->
-              </div> <!-- result-tab-secondary-container -->
+                <div class='result-tab-secondary-container'>
+                  <!-- Most likely, this contents of this secondary container will be rendered
+                  on the fly. Once a user selects one of the primary tabs, that
+                  will dictate what secondary options are available. -->
+                  <div class='result-tab-secondary-strip'>
+                    <div class='result-tab'>FIFA</div>
+                    <div class='result-tab'>Splash</div>
+                    <div class='result-tab'>FIN</div>
+                  </div> <!-- result-tab-secondary-strip -->
+                </div> <!-- result-tab-secondary-container -->
 
-              <div class='result-detail-container'>
-                <!-- All the results will be rendered dynamically, as the available options are
-                dependent on the primary and secondary results chosen. -->
+                <div class='result-detail-container'>
+                  <!-- All the results will be rendered dynamically, as the available options are
+                  dependent on the primary and secondary results chosen. -->
 
-                <!-- TODO
-                What should these be? Tabs? Radio buttons?
-                -->
-              </div> <!-- result-detail-container -->
+                  <!-- TODO
+                  What should these be? Tabs? Radio buttons?
+                  -->
+                </div> <!-- result-detail-container -->
 
-            </div> <!-- result-panel -->
+              </div> <!-- result-panel -->
+
+              <!-- text box for optional, contextual input -->
+              <div class="textbox">
+              </div> <!-- textbox -->
+
+            </div> <!-- column div -->
+
           </div> <!-- row div -->
 
+
           <div class='row-div'>
-            <!-- text box for optional, contextual input -->
-            <div class="textbox">
-            </div>
 
             <div class='table-reset-button-container'>
               <div class='table-reset-button'>Clear</div>
